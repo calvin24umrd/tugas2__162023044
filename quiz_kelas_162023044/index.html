@@ -1,0 +1,65 @@
+<!-- "saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, mendupliaksi kode perogram kode program yang ada. jia saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt"-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn">Click me!</button>
+
+    <p id="result"></p>
+
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and open again — the counter will NOT reset.</p>
+
+    <script>
+        
+        let count = localStorage.getItem("clickCount");
+
+        
+        if (count === null) {
+            count = 0;
+        } else {
+            count = parseInt(count);
+        }
+
+        const result = document.getElementById("result");
+        const button = document.getElementById("btn");
+
+        
+        if (count > 0) {
+            result.innerHTML = 
+                "You have clicked the button " + count + " time(s).";
+        }
+
+       
+        button.addEventListener("click", function() {
+            count++;
+            localStorage.setItem("clickCount", count);
+
+            result.innerHTML =
+                "You have clicked the button " + count + " time(s).";
+        });
+    </script>
+
+</body>
+</html>
