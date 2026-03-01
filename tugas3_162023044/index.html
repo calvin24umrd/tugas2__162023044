@@ -1,0 +1,49 @@
+<!--""saya calvin umardi 162023044 mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, mendupliaksi kode perogram kode program yang ada. jia saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt"-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferensi Warna</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1 id="judul">Preferensi Warna</h1>
+
+<fieldset>
+    <legend>Warna</legend>
+
+    <ol>
+        <li>
+            Warna latarbelakang
+            <div id="bgBox" class="color-box"></div>
+        </li>
+        <br>
+        <li>
+            Warna teks
+            <div id="textBox" class="color-box"></div>
+        </li>
+    </ol>
+
+</fieldset>
+
+<button onclick="simpanWarna()">Simpan</button>
+
+<!-- Modal -->
+<div id="colorModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>Pilih Warna</span>
+            <button class="btn-cancel" onclick="closeModal()">X</button>
+        </div>
+        <div class="modal-body">
+            <input type="color" id="colorPicker">
+        </div>
+        <div class="modal-footer">
+            <button class="btn-select" onclick="pilihWarna()">Select</button>
+        </div>
+    </div>
+</div>
+
+<script src="scipt.js"></script>
+</body>
+</html>
